@@ -54,11 +54,11 @@
     #navbar.scrolled { background: rgba(245,243,239,0.97); backdrop-filter: blur(12px); padding: 12px 0; box-shadow: 0 2px 20px rgba(0,22,90,0.08); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo-img {
-      height: 52px; width: auto; transition: height var(--transition), filter var(--transition);
+      height: 104px; width: auto; transition: height var(--transition), filter var(--transition);
       mix-blend-mode: screen;
     }
     #navbar.scrolled .nav-logo-img {
-      height: 44px;
+      height: 88px;
       mix-blend-mode: normal;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -84,7 +84,7 @@
     .hero-slogan strong { color: rgba(255,255,255,0.8); font-weight: 500; }
     .hero-ctas { display: flex; flex-direction: column; gap: 0.75rem; max-width: 380px; opacity: 0; animation: fadeUp 0.8s 0.65s forwards; }
     .hero-visual { position: relative; opacity: 0; animation: fadeIn 1s 0.5s forwards; }
-    .hero-photo-wrap { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3/4; max-height: 560px; }
+    .hero-photo-wrap { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3/4; max-width: 300px; max-height: 400px; }
     .hero-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .hero-photo-wrap::before { content: ''; position: absolute; inset: -2px; border-radius: calc(var(--radius) + 2px); background: linear-gradient(135deg, var(--or) 0%, transparent 50%, var(--or) 100%); z-index: -1; }
     .hero-badge { position: absolute; bottom: -18px; left: -18px; background: var(--sable); border-radius: var(--radius); padding: 16px 20px; display: flex; align-items: center; gap: 12px; min-width: 190px; box-shadow: var(--shadow-card); border: 1px solid var(--sable-border); }
@@ -239,6 +239,16 @@
     .footer-contact a svg { width: 14px; height: 14px; color: var(--or); flex-shrink: 0; }
     .footer-contact a:hover { color: var(--or); }
 
+    /* ── RÉFÉRENCES LÉGALES & HABILITATIONS ── */
+    .footer-legal { margin-top: 2.2rem; padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,0.09); }
+    .footer-legal-title { text-align: center; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--or); margin-bottom: 1.3rem; display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .footer-legal-title::before, .footer-legal-title::after { content: ''; display: block; width: 28px; height: 1px; background: rgba(255,212,42,0.4); }
+    .footer-legal-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem 0; max-width: 980px; margin: 0 auto; }
+    .footer-legal-list li { display: flex; flex-direction: column; gap: 3px; padding: 0 1.5rem; text-align: center; position: relative; }
+    .footer-legal-list li:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 26px; background: rgba(255,255,255,0.1); }
+    .footer-legal-label { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .footer-legal-value { font-size: 0.76rem; font-weight: 400; letter-spacing: 0.02em; color: rgba(255,255,255,0.62); font-variant-numeric: tabular-nums; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
@@ -270,6 +280,8 @@
       .contact-ctas a { justify-content: center; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
+      .footer-legal-list li:not(:last-child)::after { display: none; }
+      .footer-legal-list { gap: 1.1rem 0; }
     }
   </style>
 </head>
@@ -475,7 +487,6 @@
       <div class="opport-grid">
         <div class="reveal">
           <p class="eyebrow"> Envie d'une nouvelle, ou d'une première expérience professionnelle ? </p>
-          <h2 class="titre">Envie de changer <em>de voie ? Rejoignez notre équipe dynamique et motivée!</em></h2>
           <p class="desc" style="margin-top:1rem;">Ce métier est fait pour ceux qui veulent plus de liberté, plus de sens, et un impact réel sur la vie des gens.</p>
           <ul class="opport-list">
             <li>Vous n'êtes plus épanoui professionnellement</li>
@@ -484,7 +495,7 @@
             <li>Vous êtes prêt à être accompagné et formé</li>
             <li>A temps complet? Partiel? en double activité? Tout est possible</li>
           </ul>
-          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=SPa5gk9wR0aiViAQ9QQFoFGn3_oiaxBKiNWHsudYTJFUMFQwSFc0RjlJM0dWNUMyUklZOEdVN0tTTy4u" target="_blank" class="btn-bleu" style="display:inline-flex;width:fit-content;"> Comme moi vivez l'expérience, rejoignez notre équipe →</a>
+          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=SPa5gk9wR0aiViAQ9QQFoFGn3_oiaxBKiNWHsudYTJFUMFQwSFc0RjlJM0dWNUMyUklZOEdVN0tTTy4u" target="_blank" class="btn-bleu" style="display:inline-flex;width:fit-content;"> En apprendre plus sur le métier de conseiller? →</a>
         </div>
         <div class="opport-visual reveal d1">
           <div class="opport-visual-img">
@@ -549,7 +560,6 @@
       <div class="contact-inner">
         <p class="eyebrow">Mes coordonnées</p>
         <h2>Votre patrimoine mérite<br><em>une vraie réflexion, un vrai soutien.</em></h2>
-        <p class="desc">Pour toute question, vous pouvez me joindre directement par email ou par téléphone.</p>
         <div class="contact-coords">
           <a href="mailto:contact@periclesprestige.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>contact@periclesprestige.fr</a>
           <a href="tel:+33650773903"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>06 50 77 39 03</a>
@@ -580,7 +590,18 @@
         <a href="mailto:contact@periclesprestige.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>contact@periclesprestige.fr</a>
         <a href="tel:+33650773903"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>06 50 77 39 03</a>
       </div>
-      <p class="footer-copy">© 2025 Périclès Prestige — Le soutien dont vous avez toujours eu besoin, et bien plus encore</p>
+      <div class="footer-legal">
+        <p class="footer-legal-title">Mentions légales &amp; habilitations</p>
+        <ul class="footer-legal-list">
+          <li><span class="footer-legal-label">N° ORIAS</span><span class="footer-legal-value">26006946</span></li>
+          <li><span class="footer-legal-label">N° Carte professionnelle</span><span class="footer-legal-value">CPI31012015000001813</span></li>
+          <li><span class="footer-legal-label">Attestation CCI N° </span><span class="footer-legal-value">ADC31012026000001567</span></li>
+          <li><span class="footer-legal-label">N° SIRET</span><span class="footer-legal-value">995 198 173 00016</span></li>
+          <li><span class="footer-legal-label">Resp Civile Professionnelle</span><span class="footer-legal-value">Police n°7400023129</span></li>
+          <li><span class="footer-legal-label">ANACOFI Courtage</span><span class="footer-legal-value">Adhérent n°48992</span></li>
+        </ul>
+      </div>
+      <p class="footer-copy">© 2026 Périclès Prestige — Le soutien dont vous avez toujours eu besoin, et bien plus encore</p>
     </div>
   </footer>
 
